@@ -1,0 +1,102 @@
+﻿<Window x:Class="horses.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:horses"
+        mc:Ignorable="d"
+        Title="MainWindow" Name="mn" Height="650" Width="800" Loaded="mn_Loaded">
+    <Window.Background>
+
+        <ImageBrush Opacity="0.2" ImageSource="horse1.jpg"/>
+
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="322*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="progress"  VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,101,-0.4,101">
+            <StackPanel.RenderTransform>
+                <RotateTransform Angle="{Binding ElementName=sl, Path=RenderTransform.Value}"  CenterX="400" CenterY="325"></RotateTransform>
+            </StackPanel.RenderTransform>
+
+
+
+            <Label Name="hl1" Content="{Binding Path=k}" />
+            <Grid>
+                <ProgressBar Name="h1" Opacity="0.2" Height="30" VerticalAlignment="Center"  Value="{Binding ProgressPercentageComplete, Mode=OneWay}" Margin="20,20,19.6,10" Minimum="0" Maximum="100" FontStyle="Italic" BorderBrush="#FFBCBCBC" Loaded="h1_Loaded" ValueChanged="h1_ValueChanged">
+                </ProgressBar>
+                <TextBlock Text="{Binding ElementName=h1, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="Фортуна" Foreground="White"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30" Width="66"/>
+                <Image x:Name="___Img_" Source="RaceHorse.gif"  Margin="{Binding ElementName=h1, Path=Value}" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.448,0.6" >
+                    
+                </Image>
+            </Grid>
+
+
+            <Label Name="hl2" Content="{Binding Path=k}" />
+            <Grid>
+                <ProgressBar Name="h2" Opacity="0.2" Height="30" VerticalAlignment="Center"  Value="{Binding ProgressPercentageComplete}" Margin="20,20,19.6,10" Minimum="0" Maximum="100" ValueChanged="h1_ValueChanged">
+                </ProgressBar>
+                <TextBlock Text="{Binding ElementName=h2, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="Молния" Foreground="White"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30" Width="66"/>
+                <Image Source="RaceHorse.gif" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.448,0.6" Margin="91,20,0,0"/>
+            </Grid>
+
+            <Label Name="hl3" Content="{Binding Path=k}" />
+            <Grid>
+                <ProgressBar Name="h3" Opacity="0.2" Height="30" VerticalAlignment="Center"  Value="{Binding ProgressPercentageComplete}" Margin="20,20,19.6,10" Minimum="0" Maximum="100" ValueChanged="h1_ValueChanged">
+                </ProgressBar>
+                <TextBlock Text="{Binding ElementName=h3, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="Королева" Foreground="White"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30" Width="66"/>
+                <Image Source="RaceHorse.gif" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.448,0.6" Margin="91,20,0,0"/>
+            </Grid>
+
+            <Label Name="hl4" Content="{Binding Path=k}" />
+            <Grid>
+                <ProgressBar Name="h4" Opacity="0.2" Height="30" VerticalAlignment="Center"  Value="{Binding ProgressPercentageComplete}" Margin="20,20,19.6,10" Minimum="0" Maximum="100">
+                </ProgressBar>
+                <TextBlock Text="{Binding ElementName=h4, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="Фрося" Foreground="White"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30" Width="66"/>
+                <Image Source="RaceHorse.gif" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.448,0.6" Margin="91,20,0,0"/>
+            </Grid>
+
+            <Label Name="hl5" Content="{Binding Path=k}" />
+            <Grid>
+                <ProgressBar Name="h5" Opacity="0.2" Height="30" VerticalAlignment="Center"  Value="{Binding ProgressPercentageComplete}" Margin="20,20,19.6,10" Minimum="0" Maximum="100">
+                </ProgressBar>
+                <TextBlock Text="{Binding ElementName=h5, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="Ураган" Foreground="White"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30" Width="84"/>
+                <Image Source="RaceHorse.gif" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.448,0.6" Margin="91,20,0,0"/>
+            </Grid>
+
+            <Label Name="hl6" Content="{Binding Path=k}" />
+            <Grid>
+                <ProgressBar Name="h6" Opacity="0.2" Height="30" VerticalAlignment="Center"  Value="{Binding ProgressPercentageComplete}" Margin="20,20,19.6,10" Minimum="0" Maximum="100">
+                </ProgressBar>
+                <TextBlock Text="{Binding ElementName=h6, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Content="Вихрь" Foreground="White"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30" Width="66"/>
+                <Image Source="RaceHorse.gif" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.448,0.6" Margin="91,20,0,0"/>
+            </Grid>
+
+
+        </StackPanel>
+        <DockPanel VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+            <TextBlock Background="Green" Opacity="0.4"  Height="45" VerticalAlignment="Center" Margin="20" Width="752"><Run Text="Поворот "/><InlineUIContainer>
+                    <StackPanel HorizontalAlignment="Left">
+                
+                        <Slider x:Name="sl"  Value="{Binding RenderTransform.Angle, ElementName=progress}" Maximum="90" Minimum="-90" Width="150" Height="18" ValueChanged="Slider_ValueChanged"/></StackPanel>
+                </InlineUIContainer><Run Text=" "/><InlineUIContainer>
+                    <Label x:Name="gr" Content="0"/>
+           
+                </InlineUIContainer><Run Text=" "/><InlineUIContainer>
+           
+                    <Label HorizontalAlignment="Right" HorizontalContentAlignment="Right" RenderTransformOrigin="0.537,2.135" Height="24" Width="89"><Hyperlink Foreground="Black"  Click="Hyperlink_Click" ><Run   Text="Новая гонка"/></Hyperlink></Label>
+
+                </InlineUIContainer></TextBlock>
+
+        </DockPanel>
+
+    </Grid>
+</Window>
